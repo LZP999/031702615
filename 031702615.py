@@ -72,7 +72,7 @@ def creatshi(): #市级列表
     allCityList.append(["沈阳", "大连", "葫芦岛", "旅顺", "本溪", "抚顺", "铁岭", "辽阳", "营口", "阜新", "朝阳", "锦州", "丹东", "鞍山"])#30
     return allCityList
 
-Location=input("请输入需要整理的地址：")
+Location=input() 
 def phone(Location):
     #文件中连续11位数字的必是电话号码，将其提取出来
     num=re.findall("\d{11}",Location)
@@ -102,7 +102,6 @@ def result(Location):
 def difficulty(Location):
     num=re.findall("(\d)!.",Location) #把!前面的难度系数提取出来
     num=("".join(num))
-    print(num)
     return num
 
 #分离地址
